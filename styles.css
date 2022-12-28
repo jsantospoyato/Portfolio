@@ -1,0 +1,239 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --dark-color: rgb(32, 35, 49);
+    --light-color: rgb(211, 202, 105);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, var(--dark-color) 55%, black);
+    text-align: center;
+}
+
+header {
+    margin-top: -1rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 0 1rem;
+}
+
+header a {
+    border-left: 0.1rem groove var(--dark-color);
+}
+
+figcaption {
+    width: 30%;
+}
+
+h2, h1 {
+    font-size: 2.5rem;
+    color:azure;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+nav {
+    display: flex;
+    margin: auto;
+    margin-right: 1rem;
+    padding: 0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+li {
+    display: inline;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+main {
+    position: relative;
+    top: 8rem;
+    margin-bottom: 10rem;
+}
+
+section {
+    padding-bottom: 4rem;
+}
+
+figure {
+    display: flex;
+}
+
+p {
+    margin: auto;
+    padding: 0 1rem;
+}
+
+a {
+    color:var(--dark-color);
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: azure;
+}
+
+img {
+    width: 60%;
+    border: 1rem groove var(--light-color);
+}
+
+.photo {
+    border-radius: 50%;
+}
+
+.photo:hover {
+    animation: 3s linear infinite rotate;
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+.welcome {
+    width: 50%;
+}
+
+#projects {
+    margin: auto;
+    width: 90%;
+}
+
+.projects {
+    display: flex;
+}
+
+.project-tile {
+    height: 100%;
+    margin: auto;
+    width: 31%;
+    border-radius: 5%;
+    padding: 0 1.5rem;
+}
+
+.project-tile:hover {
+    transform: scale(2);
+    cursor: not-allowed;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+}
+
+.social {
+    margin: auto;
+    width: 5rem;
+    height: 4.25rem;
+    padding-top: 0.75rem;
+    background-color: var(--light-color);
+    border-radius: 50%;
+}
+
+i {
+    font-size: 3.5rem;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    color: var(--dark-color);
+}
+
+.social:hover {
+    background-color: var(--dark-color);
+}
+
+i:hover {
+    color: azure;
+}
+
+footer {
+    border-top: 2px groove var(--light-color);
+    color: var(--light-color);
+    padding: 2rem auto 0 auto;
+    margin: 2rem auto 0.5rem auto;
+}
+
+#profile-link {
+    color: var(--light-color);
+    padding: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    header a {
+        font-size: 1.25rem;
+    }
+    
+    main {
+        top: 10rem;
+        margin-bottom: 12rem;
+    }
+
+    figure{
+        display: grid;
+        margin: auto;
+        padding: auto;
+    }
+
+    figcaption {
+        width: 50%;
+    }
+
+    img {
+        border-width: 0.75rem;
+    }
+
+    .project-tile {
+        width: 42%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    li {
+        display:grid;
+    }
+
+    header a {
+        font-size: 0.9rem;
+    }
+
+    figcaption {
+        width: 70%;
+    }
+
+    img {
+        border-width: 0.5rem;
+    }
+
+    .project-tile {
+        width: 70%;
+    }
+}
+
+/* Añadir animacion para fondo o foto */
+@keyframes rotate {
+    25% {
+        transform: rotate(35deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+    75% {
+        transform: rotate(-35deg);
+    }
+}

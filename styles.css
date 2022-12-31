@@ -6,14 +6,15 @@ html {
 }
 
 :root {
-    --dark-color: rgb(32, 35, 49);
-    --light-color: rgb(211, 202, 105);
+    --dark-color: #e2dcc6;
+    --light-color: #251749;
+    --on-dark: whitesmoke;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, var(--dark-color) 55%, black);
+    background: linear-gradient(70deg, var(--dark-color) 55%, var(--dark-color) 80%);
     text-align: center;
 }
 
@@ -36,10 +37,35 @@ figcaption {
     width: 30%;
 }
 
-h2, h1 {
+h2,
+h1,
+h3,
+h4 {
     font-size: 2.5rem;
-    color:azure;
+    color: #531e1e;
     word-wrap: break-word;
+}
+
+h2 {
+    font-size: 2.15rem;
+}
+
+h3 {
+    padding: 0.7rem;
+    color: var(--on-dark);
+    background-color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+h4 {
+    padding-bottom: 0;
+    margin-bottom: -1rem;
+    font-size: 1.25rem;
+}
+
+h5 {
+    color: #554186;
+    font-size: 1.1rem;
 }
 
 .subtitle {
@@ -51,12 +77,28 @@ nav {
     display: flex;
     margin: auto;
     margin-right: 1rem;
-    padding: 0rem;
+    padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+ul {
+    margin: auto;
+    width: 65%;
+    color: var(--light-color);
+}
+
+li > ul {
+    width: 100%;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
 li {
+    text-align: left;
     display: inline;
     padding: 0.5rem;
     list-style-type: none;
@@ -79,10 +121,11 @@ figure {
 p {
     margin: auto;
     padding: 0 1rem;
+    color: black;
 }
 
 a {
-    color:var(--dark-color);
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -92,7 +135,15 @@ header a:hover {
 
 img {
     width: 60%;
-    border: 1rem groove var(--light-color);
+    border: 1.5rem groove var(--light-color);
+}
+
+.icono {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    position: relative;
+    top: 0.75rem;
 }
 
 .photo {
@@ -145,6 +196,7 @@ img {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .social {
@@ -188,13 +240,18 @@ footer {
     header a {
         font-size: 1.25rem;
     }
-    
+
     main {
         top: 10rem;
         margin-bottom: 12rem;
     }
 
-    figure{
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    figure {
         display: grid;
         margin: auto;
         padding: auto;
@@ -215,7 +272,7 @@ footer {
 
 @media only screen and (max-width: 400px) {
     li {
-        display:grid;
+        display: grid;
     }
 
     header a {
@@ -240,9 +297,11 @@ footer {
     25% {
         transform: rotate(35deg);
     }
+
     50% {
         transform: rotate(-35deg);
     }
+
     75% {
         transform: rotate(-35deg);
     }

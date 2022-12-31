@@ -130,7 +130,8 @@ a {
 }
 
 header a:hover {
-    background-color: azure;
+    background-color: var(--on-dark);
+    color:#554186;
 }
 
 img {

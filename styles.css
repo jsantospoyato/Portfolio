@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-padding-top: 4rem;
 }
 
 :root {
@@ -14,23 +15,19 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(70deg, var(--dark-color) 55%, var(--dark-color) 80%);
+    background-color: var(--dark-color);
     text-align: center;
 }
 
 header {
-    margin-top: -1rem;
+    top: 0;
+    padding-top: 5rem;
     width: 100%;
     position: fixed;
-    display: flex;
     z-index: 10;
     background-color: var(--light-color);
     color: var(--dark-color);
     padding: 0 1rem;
-}
-
-header a {
-    border-left: 0.1rem groove var(--dark-color);
 }
 
 figcaption {
@@ -74,12 +71,13 @@ h5 {
 }
 
 nav {
-    display: flex;
+    word-spacing: 2rem;
+    width: 100%;
     margin: auto;
-    margin-right: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    float: left;
 }
 
 ul {

@@ -2,4 +2,4 @@
 
 ## Author: Juan Santos Poyato
 
-[!project](https://jsantospoyato.github.io/portfolio/)
+[project](https://jsantospoyato.github.io/portfolio/)

@@ -134,7 +134,7 @@ header a:hover {
 
 img {
     width: 60%;
-    border: 1.5rem groove var(--light-color);
+    box-shadow: 1rem 1rem 0.5rem var(--light-color);
 }
 
 .icono {

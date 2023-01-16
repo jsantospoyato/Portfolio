@@ -1,20 +1,20 @@
+@import './_resets.sass'
 /* Siguiendo metodología BEM*/
-:root
-    --first-color: #e2dcc6
-    --second-color: #251749
-    --third-color: #554186
-    --on-dark: whitesmoke
 
-html
-    box-sizing: border-box
-    scroll-behavior: smooth
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-    scroll-padding-top: 4rem
+// Colors
+$first-color: #e2dcc6
+$second-color: #251749
+$third-color: #554186
+$fourth-color: #531e1e
+$on-dark: whitesmoke
+
+// Sizes
+$container-small: 50%
+$container-tiny: 70%
 
 body
-    margin: 0
-    padding: 0
-    background-color: var(--first-color)
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    background-color: $first-color
     text-align: center
 
 header
@@ -23,13 +23,13 @@ header
     width: 100%
     position: fixed
     z-index: 10
-    background-color: var(--second-color)
-    color: var(--first-color)
+    background-color: $second-color
+    color: $first-color
     padding: 0 1rem
     
     & a:hover
-        background-color: var(--on-dark)
-        color: var(--third-color)
+        background-color: $on-dark
+        color: $third-color
 
 main
     position: relative
@@ -37,8 +37,8 @@ main
     margin-bottom: 10rem
 
 footer
-    border-top: 2px groove var(--second-color)
-    color: var(--second-color)
+    border-top: 2px groove $second-color
+    color: $second-color
     padding: 2rem auto 0 auto
     margin: 2rem auto 0.5rem auto
 
@@ -54,18 +54,15 @@ nav
 section
     padding-bottom: 4rem
 
-figure
-    display: flex
-
 figcaption
-    width: 30%v
+    width: 50%
 
 h2,
 h1,
 h3,
 h4
     font-size: 2.5rem
-    color: #531e1e
+    color: $fourth-color
     word-wrap: break-word
 
 h2
@@ -73,8 +70,8 @@ h2
 
 h3
     padding: 0.7rem
-    color: var(--on-dark)
-    background-color: var(--second-color)
+    color: $on-dark
+    background-color: $second-color
     font-size: 1.5rem
 
 h4
@@ -83,7 +80,7 @@ h4
     font-size: 1.25rem
 
 h5
-    color: var(--third-color)
+    color: $third-color
     font-size: 1.1rem
 
 p
@@ -92,7 +89,9 @@ p
     color: black
 
     & > i
-        width: 3.5rem
+        text-align: center
+        padding: 1rem
+        width: 5.5rem
 
 a
     color: whitesmoke
@@ -108,7 +107,7 @@ a
 ul
     margin: auto
     width: 65%
-    color: var(--second-color)
+    color: $second-color
 
 li
     text-align: left
@@ -121,24 +120,24 @@ li
 
 img
     width: 100%
-    box-shadow: 0.8rem 0.8rem 0.3rem var(--second-color)
+    box-shadow: 0.8rem 0.8rem 0.3rem $second-color
 
 i
-    text-align: center
     font-size: 3.5rem
     height: 100%
     width: 100%
     margin: auto
-    color: var(--first-color)
+    color: $first-color
     background-color: black
     padding: 0.5rem
 
 .welcome
     height: 100vh
-    word-wrap: wrap
-    maring: 10% 10%
+    margin: 0 10%
 
     &-figure
+        display: flex
+        margin: 0 10%
         width: 80%
 
         &__photo
@@ -150,7 +149,7 @@ i
         
         &__subtitle
             font-size: 1.5rem
-            color: var(--second-color)
+            color: $second-color
 
 .projects
     margin: auto
@@ -189,19 +188,19 @@ i
     &-icon
         margin: 2rem 2rem auto 2rem
         width: 5rem
-        height: 4.25rem
+        height: 5rem
         padding-top: 0.75rem
-        background-color: var(--second-color)
+        background-color: $second-color
         border-radius: 50%
 
         &:hover
-            background-color: var(--third-color)
+            background-color: $third-color
             
         &__link
-            color: var(--first-color)
+            color: $first-color
             padding: auto
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: $device-small)
     header a
         font-size: 1.25rem
 
@@ -219,15 +218,15 @@ i
         padding: auto
 
     figcaption
-        width: 50%
+        width: $container-small
 
     img
         border-width: 0.75rem
 
     .projects-tile
-        width: 50%
+        width: $container-small
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: $device-tiny)
     html
         scroll-padding-top: 10rem
 
@@ -238,13 +237,13 @@ i
         font-size: 0.9rem
 
     figcaption
-        width: 70%
+        width: $container-tiny
 
     img
         border-width: 0.5rem
 
     .projects-tile
-        width: 75%
+        width: $container-tiny
 
 /* Añadir animacion para fondo o foto */
 @keyframes rotate

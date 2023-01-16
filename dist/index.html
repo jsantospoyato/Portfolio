@@ -10,7 +10,7 @@
     <meta name="description" content="Personal portfolio" />
     <meta name="keywords" content="pianos" />
     <title>Juan's Portfolio</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
                                                     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
                                                     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,40 +18,40 @@
 </head>
 
 <body>
-    <header id="header">
-        <nav id="navbar">
+    <header class='header' id="header">
+        <nav class="nav" id="navbar">
             <ul>
-                <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
+                <li><a class="nav-link" href="#welcome">Welcome</a></li>
                 <li><a class="nav-link" href="#projects">Projects</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
         </nav>
     </header>
-    <main>
-        <section id='welcome-section'>
-            <figure>
-                <div class='welcome'>
-                    <img class='photo'
-                        src="../img/photo.jpg"
+    <main class='main'>
+        <section class='welcome'>
+            <figure class='welcome-figure'>
+                <div>
+                    <img class='welcome-figure__photo'
+                        src="./img/photo.jpg"
                         alt="personal photo"
                         loading='lazy' />
                 </div>
                 <figcaption>
-                    <h1>Juan Santos Poyato, <span class='subtitle'>Web and Software developer | Testing Trainee (Computer Engineer Student)</span></h1>
+                    <h1>Juan Santos Poyato, <span class='welcome-figure__subtitle'>Web and Software developer | Testing Trainee (Computer Engineer Student)</span></h1>
                 </figcaption>
             </figure>
         </section>
         <section id='projects'>
             <h2>Projects</h2>
             <div class='projects'>
-                <div class='project-tile'>
-                    <a class='project-link' rel='noopener' href='https://github.com/jsantospoyato?tab=repositories' target=' _blank'>
-                        <img class='project' src="../img/projects.png" alt="projects" loading='lazy' />
+                <div class='projects-tile'>
+                    <a class='projects-tile__link' rel='noopener' href='https://github.com/jsantospoyato?tab=repositories' target=' _blank'>
+                        <img class='projecs-tile__img' src="./img/projects.png" alt="projects" loading='lazy' />
                     </a>
                 </div>
             </div>
         </section>
-        <section id='about'>
+        <section class='about' id='about'>
             <h2>About</h2>
             <ul>
                 <li>
@@ -72,7 +72,7 @@
                     <h3>Hard-Skills</h3>
                 </li>
                 <li>
-                    <div class='skills'>
+                    <div class='about-skills'>
                         <ul>
                             <li>
                                 <h4>Project management</h4>
@@ -322,27 +322,27 @@
         <section id='contact'>
             <h2>Contact</h2>
             <div class='socials'>
-                <div class='social'>
-                    <a class='profile-link' rel='noopener' href='https://www.linkedin.com/in/jsantospoyato/' aria-label='LinkedIn'
+                <div class='socials-icon'>
+                    <a class='socials-icon__link' rel='noopener' href='https://www.linkedin.com/in/jsantospoyato/' aria-label='LinkedIn'
                         target='_blank'>
                         <i class="fab fa-linkedin-in" loading='lazy'></i></a>
                 </div>
-                <div class='social'>
-                    <a class='profile-link' rel='noopener' href='https://github.com/jsantospoyato' aria-label='Github'
+                <div class='socials-icon'>
+                    <a class='socials-icon__link' rel='noopener' href='https://github.com/jsantospoyato' aria-label='Github'
                         target='_blank'><i class="fab fa-github" loading='lazy'></i></a>
                 </div>
-                <div class='social'>
-                    <a class='profile-link' rel='noopener' href='https://www.twitter.com/jsantospoyato/' aria-label='twitter'
+                <div class='socials-icon'>
+                    <a class='socials-icon__link' rel='noopener' href='https://www.twitter.com/jsantospoyato/' aria-label='twitter'
                         target='_blank'><i class="fab fa-twitter" loading='lazy'></i></a>
                 </div>
-                <div class='social'>
-                    <a class='profile-link' href='mailto: jsantospoyato@gmail.com' aria-label='Gmail' target='_blank'><i
+                <div class='socials-icon'>
+                    <a class='socials-icon__link' href='mailto: jsantospoyato@gmail.com' aria-label='Gmail' target='_blank'><i
                             class="fab fa-google" loading='lazy'></i></a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class='footer'>
         <section>
             <p>Portfolio made from scratch with HTML and CSS, by Juan Santos Poyato, 2022</p>
         </section>

@@ -2,7 +2,7 @@
 
 ## Author: Juan Santos Poyato
 
-[![project](./img/portfolio.png)](https://jsantospoyato.github.io/portfolio/)
+[![project](./dist/img/portfolio.png)](https://jsantospoyato.github.io/portfolio/)
 
 ## About this project
 
